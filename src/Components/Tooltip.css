@@ -1,85 +1,102 @@
-.top-tooltip  {
-    --scale: 0;
+.top-tooltip
+/* .top-exemple::after  */ {
+  --scale: 0;
+  --arrow-size: 10px;
 
-    background-color: red;
-    padding: 0.5rem;
-    border-radius: 0.3rem;
-    text-align: center;
-    height: max-content;
-    width: max-content;
-    max-width: 100%;
-    position: absolute;
-    top : -0.3rem;
-    left: 50%;
-    transform: translateX(-50%) translateY(-100%) scale(var(--scale));
-    transition: 150ms transform;
-    transform-origin: bottom center;
-  }
+  position: absolute;
+  top: -0.3rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0))
+    scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
 
-  /* .top-exemple::after {
-    
-      content: '';
-      border: 10px solid transparent;
-      border-top-color: red;
-  } */
+.top-tooltip {
+  --translate-y: calc(-100% - var(--arrow-size));
 
-  
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  height: max-content;
+  width: max-content;
+  max-width: 100%;
+}
 
-  .bottom-tooltip {
-    --scale: 0;
+/* .top-exemple::after {
+  --translate-y: -10px;
 
-    background-color: red;
-    padding: 0.5rem;
-    border-radius: 0.3rem;
-    text-align: center;
-    height: max-content;
-    width: max-content;
-    max-width: 100%;
-    position: absolute;
-    bottom : -0.3rem;
-    left: 50%;
-    transform: translateX(-50%) translateY(100%) scale(var(--scale));
-    transition: 150ms transform;
-    transform-origin: top center;
-  }
-  
-  .right-tooltip {
-    --scale: 0;
+  content: "";
+  border: var(--arrow-size) solid transparent;
+  border-top-color: red;
+  transform-origin: bottom top;
+} */
 
-    background-color: red;
-    padding: 0.5rem;
-    border-radius: 0.3rem;
-    text-align: center;
-    height: max-content;
-    width: max-content;
-    max-width: 100%;
-    position: absolute;
-    bottom : 50%;
-    right: -.3rem;
-    transform: translateX(100%) translateY(50%) scale(var(--scale));
-    transition: 150ms transform;
-    transform-origin: left center;
-  }
+.top-tooltip::before {
+  display: block;
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: blue;
+}
 
-  .left-tooltip {
+.hover-animation:hover .tooltip {
+  --scale: 1;
+}
 
-    --scale: 0;
 
-    background-color: red;
-    padding: 0.5rem;
-    border-radius: 0.3rem;
-    text-align: center;
-    height: max-content;
-    width: max-content;
-    max-width: 100%;
-    position: absolute;
-    bottom : 50%;
-    left: -.3rem;
-    transform: translateX(-100%) translateY(50%) scale(var(--scale));
-    transition: 150ms transform;
-    transform-origin: right center;
-  }
+.bottom-tooltip {
+  --scale: 0;
 
-  .top-exemple:hover :first-child {
-    --scale: 1;
-  } 
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  height: max-content;
+  width: max-content;
+  max-width: 100%;
+  position: absolute;
+  bottom: -0.3rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: top center;
+}
+
+.right-tooltip {
+  --scale: 0;
+
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  height: max-content;
+  width: max-content;
+  max-width: 100%;
+  position: absolute;
+  bottom: 50%;
+  right: -0.3rem;
+  transform: translateX(100%) translateY(50%) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: left center;
+}
+
+.left-tooltip {
+  --scale: 0;
+
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  height: max-content;
+  width: max-content;
+  max-width: 100%;
+  position: absolute;
+  bottom: 50%;
+  left: -0.3rem;
+  transform: translateX(-100%) translateY(50%) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: right center;
+}
+

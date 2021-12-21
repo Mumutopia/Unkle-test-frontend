@@ -7,22 +7,21 @@ function App() {
       <header>Front End Toolkit prototypes</header>
       <h1>Exemples :</h1>
       <section className="liste-exemples">
-      <div className="top-exemple">
+        <div className="hover-animation">
           this is a left test
-          <Tooltip position="left-tooltip" content="hello there" />
+          <Tooltip position="left" content="hello there" />
         </div>
-        <div className="top-exemple">
+        <div className="top-exemple hover-animation">
           this is a top test
-          <Tooltip position="top-tooltip" content="hello there" />
+          <Tooltip position="top" content="hello there" />
         </div>
-        <div className="top-exemple">
+        <div className="hover-animation">
           this is a bottom test
-          <Tooltip position="bottom-tooltip" content="hello there" />
+          <Tooltip position="bottom" content="hello there" />
         </div>
-       
-        <div className="top-exemple">
+        <div className="hover-animation">
           this is a right test
-          <Tooltip position="right-tooltip" content="hello there" />
+          <Tooltip position="right" content="hello there" />
         </div>
       </section>
     </div>

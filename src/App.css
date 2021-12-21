@@ -1,4 +1,4 @@
-.top-exemple {
+.hover-animation {
   
   width: 100px;
   background-color: black;
@@ -6,9 +6,7 @@
   position: relative;
 }
 
-.top-exemple:hover :first-child {
-  scale: 1;
-} 
+
 
 .liste-exemples {
   display: flex;
