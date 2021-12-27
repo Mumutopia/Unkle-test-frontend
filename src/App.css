@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.App{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
 .on-hover,
 .on-focus {
   display: flex;
